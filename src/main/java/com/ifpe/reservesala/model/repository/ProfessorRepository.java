@@ -52,8 +52,6 @@ public class ProfessorRepository {
         return professores;
     }
     
-    
-    
     private static void seedProfessores(List<Professor> prof) {
     prof.add(new Professor(
         1048291,
