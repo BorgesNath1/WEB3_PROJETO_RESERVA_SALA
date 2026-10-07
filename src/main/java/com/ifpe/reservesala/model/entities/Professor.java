@@ -9,7 +9,7 @@ package com.ifpe.reservesala.model.entities;
  * @author Nathan
  */
 public class Professor {
-    private int siape;
+    private String siape;
     private String nome;
     private String senha;
     
@@ -17,17 +17,17 @@ public class Professor {
         
     }
     
-    public Professor(int siapelocal, String nomelocal, String senhalocal ){
+    public Professor(String siapelocal, String nomelocal, String senhalocal ){
         this.setSiape(siapelocal);
         this.setNome(nomelocal);
         this.setSenha(senhalocal);
     }
     
-    public int getSiape() {
+    public String getSiape() {
         return siape;
     }
 
-    public final void setSiape(int siape) {
+    public final void setSiape(String siape) {
         this.siape = siape;
     }
 

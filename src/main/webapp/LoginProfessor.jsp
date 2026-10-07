@@ -19,7 +19,12 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link rel="stylesheet" href="./css/style.css">
     </head>
-    <body>      
+    <body>
+        <c:if test="${sessionScope.ProfessorLogado ne null}">
+            <script>
+                location.href='indexProfessor.jsp'
+            </script>
+        </c:if>
         <main class="container-fluid login-container p-0">
             <div class="row g-0 min-vh-100">
 
@@ -77,17 +82,24 @@
                         </div>
 
                         <!-- Formulário Principal com validação Bootstrap 5 -->
-                        <form id="professorLoginForm" class="needs-validation" novalidate>
+                        <form id="professorLoginForm" 
+                              class="needs-validation" 
+                              novalidate
+                              method="post"
+                              action="ProfessorLogin"
+                              >
 
                             <!-- Campo: Matrícula ou E-mail -->
+                            <input type="hidden" name="operacao" value="login"/>
                             <div class="mb-3 position-relative">
                                 <div class="form-floating position-relative">
                                     <i class="bi bi-person-badge input-icon-prepend"></i>
                                     <input 
                                         type="text" 
                                         class="form-control" 
-                                        id="teacherId" 
-                                        placeholder="exemplo@instituicao.edu.br" 
+                                        id="teacherId"
+                                        name="siape"
+                                        placeholder="12345" 
                                         required
                                         autocomplete="username"
                                         >
@@ -106,6 +118,7 @@
                                         type="password" 
                                         class="form-control" 
                                         id="teacherPassword" 
+                                        name="senha"
                                         placeholder="Sua senha" 
                                         required
                                         minlength="6"
@@ -114,7 +127,7 @@
                                     <label for="teacherPassword">Senha de Acesso</label>
                                     <button 
                                         type="button" 
-                                        id="togglePasswordBtn" 
+                                        id="togglePasswordBtn"
                                         class="password-toggle-btn" 
                                         aria-label="Alternar exibição da senha"
                                         title="Mostrar/Ocultar senha"
@@ -138,17 +151,23 @@
                             </div>
 
                             <!-- Botão de Login com Indicador de Carregamento -->
-                            <button type="submit" id="submitBtn" class="btn btn-submit-login w-100 mb-3 d-flex align-items-center justify-content-center gap-2">
+                            <button 
+                                type="submit" 
+                                id="submitBtn" 
+                                class="btn btn-submit-login w-100 mb-3 d-flex align-items-center justify-content-center gap-2"
+                                >
                                 <span id="btnText">Acessar Portal</span>
                                 <i class="bi bi-arrow-right" id="btnIcon"></i>
                                 <div id="btnSpinner" class="spinner-border spinner-border-sm text-light d-none" role="status">
                                     <span class="visually-hidden">Validando...</span>
                                 </div>
                             </button>
-
+                            
                             <!-- Separador Institucional -->
                             <div class="divider-text"></div>
-
+                            
+                            <!-- Botão de Cadastro -->
+                            
                            <!-- Banner Informativo / Dúvidas Acadêmicas -->
                             <div class="meu-alert alert alert-light border border-dashed rounded-3 p-3 d-flex align-items-start gap-2 mb-0" role="note">
                                 <div class="small text-muted">
@@ -156,6 +175,18 @@
                                     <p class="meu-paragrafo">contate a DGTI</p>
                                 </div>
                             </div>
+                           
+                           <button 
+                                type="submit" 
+                                id="submitBtn" 
+                                class="btn btn-submit-registrar w-100 mb-3 d-flex align-items-center justify-content-center gap-2"
+                                >
+                                <span id="btnText">Cadastre-se</span>
+                                <i class="bi bi-box-arrow-in-left" id="btnIcon"></i>
+                            </button>
+
+                            <!-- Separador Institucional -->
+                            <div class="divider-text"></div>
 
                         </form>
 

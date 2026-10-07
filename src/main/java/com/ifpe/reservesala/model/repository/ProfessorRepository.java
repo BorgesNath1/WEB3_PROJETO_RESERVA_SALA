@@ -25,10 +25,10 @@ public class ProfessorRepository {
         professores.add(prof);
     }
     
-    public static Professor read (int siape){
+    public static Professor read (String siape){
         
         for (Professor p: professores){
-            if (p.getSiape() == siape){
+            if (p.getSiape().equals(siape)){
                 return p.selfReplicate();
             }
         }
@@ -37,7 +37,7 @@ public class ProfessorRepository {
     
     public static void update(Professor prof){
         for(Professor p : professores){
-            if (p.getSiape() == prof.getSiape()){
+            if (p.getSiape().equals(prof.getSiape())){
                 p.setNome(prof.getNome());
                 p.setSenha(prof.getSenha());
             }
@@ -54,31 +54,31 @@ public class ProfessorRepository {
     
     private static void seedProfessores(List<Professor> prof) {
     prof.add(new Professor(
-        1048291,
+        "1048291",
         "Carlos Eduardo Silva",
         "senhaSegura#2024"
     ));
 
     prof.add(new Professor(
-        2193840,
+        "2193840",
         "Mariana Souza Ribeiro",
         "mariana@prof99"
     ));
 
     prof.add(new Professor(
-        1839204,
+        "1839204",
         "Roberto de Alencar",
         "r3b#Alencar!"
     ));
 
     prof.add(new Professor(
-        2948103,
+        "2948103",
         "Fernanda Lima Mendes",
         "feL1ma_mendes"
     ));
 
     prof.add(new Professor(
-        1572938,
+        "1572938",
         "Lucas Pereira Duarte",
         "lucasDuarte*2024"
     ));

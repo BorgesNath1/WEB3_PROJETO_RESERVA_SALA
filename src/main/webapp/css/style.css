@@ -145,27 +145,54 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     }
 
     /* Main Action Button */
-    .btn-submit-login {
-      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
-      color: white;
-      border: none;
-      border-radius: 12px;
-      padding: 0.85rem 1.5rem;
-      font-weight: 600;
-      font-size: 1rem;
-      letter-spacing: 0.2px;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+    /* Login (Azul) */
+    .btn.btn-submit-login {
+        background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+        color: #ffffff;
+        border: none;
+        border-radius: 12px;
+        padding: 0.85rem 1.5rem;
+        font-weight: 600;
+        font-size: 1rem;
+        letter-spacing: 0.2px;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
     }
 
-    .btn-submit-login:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
-      background: linear-gradient(135deg, #172554 0%, #1d4ed8 100%);
+    .btn.btn-submit-login:hover {
+        transform: translateY(-2px);
+        background: linear-gradient(135deg, #172554 0%, #1d4ed8 100%);
+        box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+        color: #ffffff;
     }
 
-    .btn-submit-login:active {
-      transform: translateY(0);
+    .btn.btn-submit-login:active {
+        transform: translateY(0);
+    }
+
+    /* Registrar (Verde) */
+    .btn.btn-submit-registrar {
+        background: linear-gradient(135deg, #006d46 0%, #008d62 100%);
+        color: #ffffff;
+        border: none;
+        border-radius: 12px;
+        padding: 0.85rem 1.5rem;
+        font-weight: 600;
+        font-size: 1rem;
+        letter-spacing: 0.2px;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        box-shadow: 0 4px 14px rgba(0, 109, 70, 0.25);
+    }
+
+    .btn.btn-submit-registrar:hover {
+        transform: translateY(-2px);
+        background: linear-gradient(135deg, #005234 0%, #00734f 100%);
+        box-shadow: 0 8px 20px rgba(0, 109, 70, 0.35);
+        color: #ffffff;
+    }
+
+    .btn.btn-submit-registrar:active {
+        transform: translateY(0);
     }
 
     /* SSO Buttons */
@@ -237,3 +264,4 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
         margin: 0;
         box-sizing: border-box;
     }
+    
