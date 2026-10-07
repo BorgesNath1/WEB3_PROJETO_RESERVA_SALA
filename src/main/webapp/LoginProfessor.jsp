@@ -162,6 +162,7 @@
                                     <span class="visually-hidden">Validando...</span>
                                 </div>
                             </button>
+                            <p class="h4">${requestScope.msg}</p>
                             
                             <!-- Separador Institucional -->
                             <div class="divider-text"></div>

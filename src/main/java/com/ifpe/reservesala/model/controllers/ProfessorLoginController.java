@@ -48,10 +48,11 @@ public class ProfessorLoginController extends HttpServlet {
                     
                     if(p != null && p.getSenha().equals(senha)){
                         request.getSession().setAttribute("ProfessorLogado", p);
+                        response.sendRedirect("indexProfessor.jsp");
                         return;
                     } else {
                         request.setAttribute("msg", "Login inválido, credenciais de siape ou senha estão incorretos.");
-                        request.getServletContext().getRequestDispatcher("/LoginProfessor.jsp").forward(request, response);
+                        request.getServletContext().getRequestDispatcher("LoginProfessor.jsp").forward(request, response);
                         return;
                     }
                     
