@@ -22,7 +22,7 @@
     <body>
         <c:if test="${sessionScope.ProfessorLogado ne null}">
             <script>
-                location.href='indexProfessor.jsp'
+                location.href='indexProfessor.jsp';
             </script>
         </c:if>
         <main class="container-fluid login-container p-0">
