@@ -168,6 +168,11 @@
                             
                             <!-- Botão de Cadastro -->
                             
+                           <c:import url="ModalCadastro.jsp"></c:import>
+
+                            <!-- Separador Institucional -->
+                            <div class="divider-text"></div>
+                            
                            <!-- Banner Informativo / Dúvidas Acadêmicas -->
                             <div class="meu-alert alert alert-light border border-dashed rounded-3 p-3 d-flex align-items-start gap-2 mb-0" role="note">
                                 <div class="small text-muted">
@@ -176,17 +181,6 @@
                                 </div>
                             </div>
                            
-                           <button 
-                                type="submit" 
-                                id="submitBtn" 
-                                class="btn btn-submit-registrar w-100 mb-3 d-flex align-items-center justify-content-center gap-2"
-                                >
-                                <span id="btnText">Cadastre-se</span>
-                                <i class="bi bi-box-arrow-in-left" id="btnIcon"></i>
-                            </button>
-
-                            <!-- Separador Institucional -->
-                            <div class="divider-text"></div>
 
                         </form>
 

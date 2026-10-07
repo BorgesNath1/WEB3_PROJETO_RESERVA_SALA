@@ -253,6 +253,117 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
       z-index: 1090;
     }
     
+    /*    MODAL CADASTRO    */
+    
+    .modal-cadastro-content {
+        border: none;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 25px 60px rgba(15, 23, 42, 0.25);
+    }
+
+    .modal-cadastro-header {
+        background: linear-gradient(135deg, var(--primary-color) 0%, #2563eb 100%);
+        padding: 1.5rem 1.75rem;
+    }
+
+    .modal-header-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    .modal-cadastro-content .modal-body {
+        background-color: #ffffff;
+    }
+
+    /* Títulos de seção dentro do modal */
+    .section-title-modal {
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--border-soft);
+    }
+
+    /* Reaproveita o estilo do form-floating já existente */
+    .modal-cadastro-content .form-floating > .form-control,
+    .modal-cadastro-content .form-floating > .form-select {
+        border: 1.5px solid var(--border-soft);
+        border-radius: 12px;
+        padding-left: 3rem;
+        font-size: 0.95rem;
+        height: 3.5rem;
+        transition: all 0.25s ease;
+    }
+
+    .modal-cadastro-content .form-floating > .form-select {
+        padding-top: 1.4rem;
+        padding-bottom: 0.4rem;
+    }
+
+    .modal-cadastro-content .form-floating > .form-control:focus,
+    .modal-cadastro-content .form-floating > .form-select:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 4px rgba(30, 58, 138, 0.12);
+    }
+
+    .modal-cadastro-content .form-floating > label {
+        padding-left: 3rem;
+        color: var(--text-muted-dark);
+        font-size: 0.9rem;
+    }
+
+    .modal-cadastro-content .form-floating:focus-within .input-icon-prepend {
+        color: var(--primary-color);
+    }
+
+    /* Select com ícone — ajusta a seta nativa para não colidir com o ícone */
+    .modal-cadastro-content .form-select {
+        background-position: right 1rem center;
+        padding-right: 2.5rem;
+    }
+
+    /* Termos */
+    .link-termos {
+        color: var(--primary-color);
+        font-weight: 500;
+        text-decoration: none;
+    }
+    .link-termos:hover {
+        text-decoration: underline;
+        color: var(--primary-hover);
+    }
+
+    /* Botão "Cancelar" do modal */
+    .modal-cadastro-content .btn-light {
+        border-radius: 12px;
+        padding: 0.85rem 1.5rem;
+        font-weight: 500;
+        color: var(--text-muted-dark);
+    }
+    .modal-cadastro-content .btn-light:hover {
+        background-color: #f1f5f9;
+        color: #0f172a;
+    }
+
+    /* Ajustes de responsividade */
+    @media (max-width: 576px) {
+        .modal-cadastro-header {
+            padding: 1.25rem;
+        }
+        .modal-cadastro-content .modal-body {
+            padding: 1.25rem !important;
+        }
+        .modal-cadastro-content .modal-footer {
+            padding: 0 1.25rem 1.25rem !important;
+        }
+    }
+    
     .meu-alert{
         display: flex;
         justify-content: center;
@@ -264,4 +375,5 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
         margin: 0;
         box-sizing: border-box;
     }
+    
     

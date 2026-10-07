@@ -1,29 +1,17 @@
-<%-- 
-    Document   : testeModal
-    Created on : 7 de out. de 2026, 09:05:22
-    Author     : ALUNOS 2
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-        <link rel="stylesheet" href="./css/style.css">
-        <title>JSP Page</title>
-    </head>
-    <body>
+        <button
+            type="button"
+            class="btn btn-submit-registrar w-100 mb-3 d-flex align-items-center justify-content-center gap-2"
+            data-bs-toggle="modal"
+            data-bs-target="#modalCadastroProfessor">
+            <span>Cadastre-se</span>
+            <i class="bi bi-box-arrow-in-left"></i>
+        </button>
         <!-- Modal de Cadastro do Professor -->
         <div class="modal fade" id="modalCadastroProfessor" tabindex="-1" aria-labelledby="modalCadastroProfessorLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
                 <div class="modal-content modal-cadastro-content">
 
-                    <!-- Cabe√ßalho -->
+                    <!-- CabeÁalho -->
                     <div class="modal-header modal-cadastro-header border-0">
                         <div class="d-flex align-items-center gap-3">
                             <div class="bg-white bg-opacity-10 p-2 rounded-3 d-flex align-items-center justify-content-center modal-header-icon">
@@ -63,7 +51,7 @@
                                         <i class="bi bi-person-badge input-icon-prepend"></i>
                                         <input type="text" class="form-control" id="cadSiape" name="siape" placeholder="SIAPE" required pattern="[0-9]{6,8}">
                                         <label for="cadSiape">SIAPE</label>
-                                        <div class="invalid-feedback ps-2">Informe um SIAPE v√°lido (6 a 8 d√≠gitos).</div>
+                                        <div class="invalid-feedback ps-2">Informe um SIAPE v·lido (6 a 8 dÌgitos).</div>
                                     </div>
                                 </div>
                             </div>
@@ -74,7 +62,7 @@
                                         <i class="bi bi-envelope input-icon-prepend"></i>
                                         <input type="email" class="form-control" id="cadEmail" name="email" placeholder="E-mail institucional" required>
                                         <label for="cadEmail">E-mail Institucional</label>
-                                        <div class="invalid-feedback ps-2">Informe um e-mail v√°lido.</div>
+                                        <div class="invalid-feedback ps-2">Informe um e-mail v·lido.</div>
                                     </div>
                                 </div>
                                 <div class="col-md-5">
@@ -85,7 +73,7 @@
                                             <option value="recife">Recife</option>
                                             <option value="olinda">Olinda</option>
                                             <option value="caruaru">Caruaru</option>
-                                            <option value="jaboatao">Jaboat√£o</option>
+                                            <option value="jaboatao">Jaboat„o</option>
                                         </select>
                                         <label for="cadCampus">Campus</label>
                                         <div class="invalid-feedback ps-2">Selecione o campus.</div>
@@ -107,7 +95,7 @@
                                         <button type="button" class="password-toggle-btn" data-toggle-target="cadSenha" aria-label="Mostrar senha">
                                             <i class="bi bi-eye"></i>
                                         </button>
-                                        <div class="invalid-feedback ps-2">M√≠nimo de 6 caracteres.</div>
+                                        <div class="invalid-feedback ps-2">MÌnimo de 6 caracteres.</div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -127,23 +115,23 @@
                             <div class="form-check mb-2">
                                 <input class="form-check-input" type="checkbox" id="cadTermos" name="termos" required>
                                 <label class="form-check-label text-muted small" for="cadTermos">
-                                    Declaro que as informa√ß√µes s√£o ver√≠dicas e aceito os <a href="#" class="link-termos">termos de uso</a>.
+                                    Declaro que as informaÁıes s„o verÌdicas e aceito os <a href="#" class="link-termos">termos de uso</a>.
                                 </label>
-                                <div class="invalid-feedback ps-2">√â necess√°rio aceitar os termos.</div>
+                                <div class="invalid-feedback ps-2">… necess·rio aceitar os termos.</div>
                             </div>
 
-                            <!-- Alerta de d√∫vidas -->
+                            <!-- Alerta de d˙vidas -->
                             <div class="alert alert-light border border-dashed rounded-3 p-3 d-flex align-items-start gap-2 mb-0 mt-3" role="note">
                                 <i class="bi bi-info-circle text-primary"></i>
                                 <div class="small text-muted">
-                                    <span class="fw-semibold text-dark d-block">Em caso de d√∫vidas</span>
+                                    <span class="fw-semibold text-dark d-block">Em caso de d˙vidas</span>
                                     contate a DGTI.
                                 </div>
                             </div>
                         </form>
                     </div>
 
-                    <!-- Rodap√© -->
+                    <!-- RodapÈ -->
                     <div class="modal-footer border-0 px-4 pb-4 pt-0 d-flex flex-column flex-sm-row gap-2">
                         <button type="button" class="btn btn-light border w-100 w-sm-auto" data-bs-dismiss="modal">
                             Cancelar
@@ -160,6 +148,4 @@
                 </div>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
-</html>
+       
