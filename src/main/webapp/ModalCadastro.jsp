@@ -38,45 +38,22 @@
                             </h6>
 
                             <div class="row g-3 mb-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating position-relative">
-                                        <i class="bi bi-person input-icon-prepend"></i>
-                                        <input type="text" class="form-control" id="cadNome" name="nome" placeholder="Nome completo" required>
-                                        <label for="cadNome">Nome Completo</label>
-                                        <div class="invalid-feedback ps-2">Informe seu nome completo.</div>
+                                <div class="col-md-12">
+                                    <div class="col-md-12 mb-3">
+                                        <div class="form-floating position-relative">
+                                            <i class="bi bi-person input-icon-prepend"></i>
+                                            <input type="text" class="form-control" id="cadNome" name="nome" placeholder="Nome completo" required>
+                                            <label for="cadNome">Nome Completo</label>
+                                            <div class="invalid-feedback ps-2">Informe seu nome completo.</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating position-relative">
-                                        <i class="bi bi-person-badge input-icon-prepend"></i>
-                                        <input type="text" class="form-control" id="cadSiape" name="siape" placeholder="SIAPE" required pattern="[0-9]{6,8}">
-                                        <label for="cadSiape">SIAPE</label>
-                                        <div class="invalid-feedback ps-2">Informe um SIAPE válido (6 a 8 dígitos).</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row g-3 mb-4">
-                                <div class="col-md-7">
-                                    <div class="form-floating position-relative">
-                                        <i class="bi bi-envelope input-icon-prepend"></i>
-                                        <input type="email" class="form-control" id="cadEmail" name="email" placeholder="E-mail institucional" required>
-                                        <label for="cadEmail">E-mail Institucional</label>
-                                        <div class="invalid-feedback ps-2">Informe um e-mail válido.</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <div class="form-floating position-relative">
-                                        <i class="bi bi-building input-icon-prepend"></i>
-                                        <select class="form-select form-control" id="cadCampus" name="campus" required>
-                                            <option value="" selected disabled></option>
-                                            <option value="recife">Recife</option>
-                                            <option value="olinda">Olinda</option>
-                                            <option value="caruaru">Caruaru</option>
-                                            <option value="jaboatao">Jaboatão</option>
-                                        </select>
-                                        <label for="cadCampus">Campus</label>
-                                        <div class="invalid-feedback ps-2">Selecione o campus.</div>
+                                    <div class="col-md-12">
+                                        <div class="form-floating position-relative">
+                                            <i class="bi bi-envelope input-icon-prepend"></i>
+                                            <input type="email" class="form-control" id="cadEmail" name="email" placeholder="E-mail institucional" required>
+                                            <label for="cadEmail">E-mail Institucional</label>
+                                            <div class="invalid-feedback ps-2">Informe um e-mail válido.</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -87,37 +64,27 @@
                             </h6>
 
                             <div class="row g-3 mb-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating position-relative">
-                                        <i class="bi bi-lock input-icon-prepend"></i>
-                                        <input type="password" class="form-control" id="cadSenha" name="senha" placeholder="Senha" required minlength="6">
-                                        <label for="cadSenha">Senha</label>
-                                        <button type="button" class="password-toggle-btn" data-toggle-target="cadSenha" aria-label="Mostrar senha">
-                                            <i class="bi bi-eye"></i>
-                                        </button>
-                                        <div class="invalid-feedback ps-2">Mínimo de 6 caracteres.</div>
+                                <div class="col-md-12">
+                                    <div class="col-md-12 mb-3">
+                                        <div class="form-floating position-relative">
+                                            <i class="bi bi-person-badge input-icon-prepend"></i>
+                                            <input type="text" class="form-control" id="cadSiape" name="siape" placeholder="SIAPE" required pattern="[0-9]{6,8}">
+                                            <label for="cadSiape">SIAPE</label>
+                                            <div class="invalid-feedback ps-2">Informe um SIAPE válido (6 a 8 dígitos).</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-floating position-relative">
+                                            <i class="bi bi-lock input-icon-prepend"></i>
+                                            <input type="password" class="form-control" id="cadSenha" name="senha" placeholder="Senha" required minlength="6">
+                                            <label for="cadSenha">Senha</label>
+                                            <button type="button" class="password-toggle-btn" data-toggle-target="cadSenha" aria-label="Mostrar senha">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                            <div class="invalid-feedback ps-2">Mínimo de 6 caracteres.</div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating position-relative">
-                                        <i class="bi bi-lock-fill input-icon-prepend"></i>
-                                        <input type="password" class="form-control" id="cadConfirmarSenha" name="confirmarSenha" placeholder="Confirmar senha" required minlength="6">
-                                        <label for="cadConfirmarSenha">Confirmar Senha</label>
-                                        <button type="button" class="password-toggle-btn" data-toggle-target="cadConfirmarSenha" aria-label="Mostrar senha">
-                                            <i class="bi bi-eye"></i>
-                                        </button>
-                                        <div class="invalid-feedback ps-2">Confirme sua senha.</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Termos -->
-                            <div class="form-check mb-2">
-                                <input class="form-check-input" type="checkbox" id="cadTermos" name="termos" required>
-                                <label class="form-check-label text-muted small" for="cadTermos">
-                                    Declaro que as informações são verídicas e aceito os <a href="#" class="link-termos">termos de uso</a>.
-                                </label>
-                                <div class="invalid-feedback ps-2">É necessário aceitar os termos.</div>
                             </div>
 
                             <!-- Alerta de dúvidas -->
@@ -139,12 +106,8 @@
                         <button type="submit" form="professorRegistroForm" id="btnCadastrar" class="btn btn-submit-registrar flex-grow-1 d-flex align-items-center justify-content-center gap-2">
                             <span id="btnCadText">Finalizar Cadastro</span>
                             <i class="bi bi-check2-circle" id="btnCadIcon"></i>
-                            <div id="btnCadSpinner" class="spinner-border spinner-border-sm text-light d-none" role="status">
-                                <span class="visually-hidden">Enviando...</span>
-                            </div>
                         </button>
                     </div>
-
                 </div>
             </div>
         </div>

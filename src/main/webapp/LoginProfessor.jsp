@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
-        <c:if test="${sessionScope.ProfessorLogado ne null}">
+        <c:if test="${sessionScope.professorLogado ne null}">
             <script>
                 location.href='indexProfessor.jsp';
             </script>
@@ -82,14 +82,14 @@
                         </div>
 
                         <!-- Formulário Principal com validação Bootstrap 5 -->
-                        <form id="professorLoginForm" 
+                        <form id="professorLoginForm"
                               class="needs-validation" 
                               novalidate
                               method="post"
                               action="ProfessorLogin"
                               >
 
-                            <!-- Campo: Matrícula ou E-mail -->
+                            <!-- Campo: Matrícula -->
                             <input type="hidden" name="operacao" value="login"/>
                             <div class="mb-3 position-relative">
                                 <div class="form-floating position-relative">
@@ -126,7 +126,7 @@
                                         >
                                     <label for="teacherPassword">Senha de Acesso</label>
                                     <button 
-                                        type="button" 
+                                        type="submit" 
                                         id="togglePasswordBtn"
                                         class="password-toggle-btn" 
                                         aria-label="Alternar exibição da senha"
@@ -139,33 +139,28 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Opções: Lembrar e Recuperar Senha -->
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="rememberMe" style="cursor: pointer;">
-                                    <label class="form-check-label text-muted small user-select-none" for="rememberMe" style="cursor: pointer;">
-                                        Lembrar de mim
-                                    </label>
-                                </div>                                
-                            </div>
-
+                            
                             <!-- Botão de Login com Indicador de Carregamento -->
-                            <button 
+                            <button
                                 type="submit" 
                                 id="submitBtn" 
                                 class="btn btn-submit-login w-100 mb-3 d-flex align-items-center justify-content-center gap-2"
                                 >
                                 <span id="btnText">Acessar Portal</span>
                                 <i class="bi bi-arrow-right" id="btnIcon"></i>
-                                <div id="btnSpinner" class="spinner-border spinner-border-sm text-light d-none" role="status">
-                                    <span class="visually-hidden">Validando...</span>
-                                </div>
                             </button>
-                            <p class="h4">${requestScope.msg}</p>
+                            
+                            <c:if test="${not empty sessionScope.msg}">
+                                
+                                <p class="meu-erro-login">${sessionScope.msg}</p>
+                                <c:remove var="msg" scope="session"/>
+                                
+                            </c:if>
                             
                             <!-- Separador Institucional -->
                             <div class="divider-text"></div>
+
+                        </form>
                             
                             <!-- Botão de Cadastro -->
                             
@@ -181,31 +176,11 @@
                                     <p class="meu-paragrafo">contate a DGTI</p>
                                 </div>
                             </div>
-                           
-
-                        </form>
-
                     </div>
                 </section>
 
             </div>
         </main>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script>
-            // Script do Bootstrap 5 para desativar envios de formulários se houver campos inválidos
-            (() => {
-              'use strict'
-              const forms = document.querySelectorAll('.needs-validation')
-              Array.from(forms).forEach(form => {
-                form.addEventListener('submit', event => {
-                  if (!form.checkValidity()) {
-                    event.preventDefault()
-                    event.stopPropagation()
-                  }
-                  form.classList.add('was-validated')
-                }, false)
-              })
-            })()
-        </script>
     </body>
 </html>

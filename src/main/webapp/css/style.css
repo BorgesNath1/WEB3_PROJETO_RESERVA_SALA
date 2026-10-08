@@ -376,4 +376,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
         box-sizing: border-box;
     }
     
+    .meu-erro-login{
+        text-align: center;
+        color:red;
+    }
+    
     
