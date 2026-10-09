@@ -7,7 +7,6 @@ package com.ifpe.reservesala.model.controllers;
 import com.ifpe.reservesala.model.entities.Professor;
 import com.ifpe.reservesala.model.repository.ProfessorRepository;
 import java.io.IOException;
-import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -48,10 +47,10 @@ public class ProfessorLoginController extends HttpServlet {
                     
                     if(p != null && p.getSenha().equals(senha)){
                         request.getSession().setAttribute("professorLogado", p);
-                        request.getServletContext().getRequestDispatcher("/indexProfessor.jsp").forward(request, response);
+                        response.sendRedirect("indexProfessor.jsp");
                     } else {
                         request.getSession().setAttribute("msg", "Login inválido, credenciais de siape ou senha estão incorretos.");
-                        response.sendRedirect("LoginProfessor.jsp");
+                        request.getServletContext().getRequestDispatcher("/LoginProfessor.jsp").forward(request, response);
                     }
                     break;
                 case "cadastrar":
@@ -63,7 +62,7 @@ public class ProfessorLoginController extends HttpServlet {
                     break;
 
                 default:
-                    response.sendRedirect("LoginProfessor.jsp");
+                    request.getServletContext().getRequestDispatcher("/LoginProfessor.jsp").forward(request, response);
             }
             
     }

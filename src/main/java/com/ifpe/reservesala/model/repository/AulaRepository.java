@@ -24,7 +24,7 @@ public class AulaRepository {
     
     static{
         aulas = new ArrayList<>();
-        
+        seedAulas(aulas);
     }
     
     public static void create (Aula aula){

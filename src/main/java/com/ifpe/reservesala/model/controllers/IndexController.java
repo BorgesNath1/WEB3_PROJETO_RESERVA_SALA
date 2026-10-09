@@ -26,25 +26,6 @@ public class IndexController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        Professor p = (Professor)request.getSession().getAttribute("professorLogado");
-                List<Aula> a = AulaRepository.readByProfessor(p);
-                request.setAttribute("listaAulas", a);
-                request.getRequestDispatcher("/indexProfessor.jsp").forward(request, response);
-        
-//        String op = request.getParameter("operacao");
-//        
-//        if (op == null){
-//            op = "";
-//        }
-//        
-//        switch (op){
-//            default:
-//                Professor p = (Professor)request.getSession().getAttribute("professorLogado");
-//                List<Aula> a = AulaRepository.readByProfessor(p);
-//                request.setAttribute("listaAulas", a);
-//                request.getRequestDispatcher("/indexProfessor.jsp").forward(request, response);
-//                break;
-//        }
     }
 
     
