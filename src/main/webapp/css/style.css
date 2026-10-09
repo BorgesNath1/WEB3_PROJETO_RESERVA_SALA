@@ -24,6 +24,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
       color: #0f172a;
       min-height: 100vh;
       overflow-x: hidden;
+      height: 100%;
     }
 
     h1, h2, h3, h4, .brand-font {
@@ -405,4 +406,5 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
         .footer-custom {
             background-color: #ffffff;
             border-top: 1px solid var(--border-soft);
+            
         }

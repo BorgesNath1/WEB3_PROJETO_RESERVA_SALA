@@ -39,9 +39,25 @@ Author     : Nathan
 
             <c:import url="header.jsp"></c:import>
             <c:import url="ModalCadastroAula.jsp"></c:import>
-
+            <c:import url="ModalCadastroEquipamento.jsp"></c:import>
+            <c:import url="ModalCadastroSala.jsp"></c:import>
             <!-- ======================= MAIN ======================= -->
             <main class="container my-5 flex-grow-1">
+                
+                <!-- Breadcrumb de Navegação -->
+                <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb py-1 px-0 bg-transparent mb-0 small">
+                        <li class="breadcrumb-item">
+                            <a href="${request.sendRedirect("/ProfessorIndexController")}" class="text-decoration-none text-muted d-inline-flex align-items-center gap-1">
+                                <i class="bi bi-house-door-fill text-primary"></i>
+                                <span>Início</span>
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item active text-dark fw-semibold" aria-current="page">
+                            Minhas Aulas Agendadas
+                        </li>
+                    </ol>
+                </nav>
                 <!-- Cabeçalho de Seção -->
                 <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center mb-4 gap-2">
                     <div>
@@ -131,5 +147,16 @@ Author     : Nathan
 
         <!-- Bootstrap JS Bundle -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            document.getElementById('dataAula').min = new Date().toISOString().split('T')[0];
+            
+            const btnLogout = document.getElementById('loggout');
+            if (btnLogout) {
+                btnLogout.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    window.location.href = 'LoginProfessor.jsp';
+                    });
+                }
+        </script>
     </body>
 </html>
