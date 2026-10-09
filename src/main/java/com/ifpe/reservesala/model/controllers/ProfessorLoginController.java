@@ -47,24 +47,21 @@ public class ProfessorLoginController extends HttpServlet {
                     Professor p = ProfessorRepository.read(siape);
                     
                     if(p != null && p.getSenha().equals(senha)){
-                        request.getSession().setAttribute("ProfessorLogado", p);
-                        response.sendRedirect("indexProfessor.jsp");
-                        return;
+                        request.getSession().setAttribute("professorLogado", p);
+                        request.getServletContext().getRequestDispatcher("/indexProfessor.jsp").forward(request, response);
                     } else {
                         request.getSession().setAttribute("msg", "Login inválido, credenciais de siape ou senha estão incorretos.");
                         response.sendRedirect("LoginProfessor.jsp");
-                        return;
                     }
-
+                    break;
                 case "cadastrar":
                     Professor pnew = new Professor(siape,nome,senha);
                     
                     ProfessorRepository.create(pnew);
                     request.setAttribute("msg", "Cadastro realizado com sucesso... Faça Login");
                     request.getServletContext().getRequestDispatcher("/LoginProfessor.jsp").forward(request, response);
-                    return;
-                    
-                                       
+                    break;
+
                 default:
                     response.sendRedirect("LoginProfessor.jsp");
             }

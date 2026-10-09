@@ -25,6 +25,7 @@
                 location.href='indexProfessor.jsp';
             </script>
         </c:if>
+            
         <main class="container-fluid login-container p-0">
             <div class="row g-0 min-vh-100">
 
@@ -132,7 +133,7 @@
                                         aria-label="Alternar exibição da senha"
                                         title="Mostrar/Ocultar senha"
                                         >
-                                        <i class="bi bi-eye" id="toggleIcon"></i>
+                                        
                                     </button>
                                     <div class="invalid-feedback ps-2">
                                         A senha precisa ter no mínimo 6 caracteres.

@@ -16,6 +16,12 @@ public class ItemEquipamento {
     
     public ItemEquipamento(){
     }
+    
+    public ItemEquipamento(int id, int quantidade, Equipamento equipamento){
+        this.setId(id);
+        this.setQuantidade(quantidade);
+        this.setEquipamento(equipamento);
+    }
 
     public int getId() {
         return id;

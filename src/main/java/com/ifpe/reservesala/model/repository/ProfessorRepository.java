@@ -82,5 +82,11 @@ public class ProfessorRepository {
         "Lucas Pereira Duarte",
         "lucasDuarte*2024"
     ));
+    
+    prof.add(new Professor(
+        "121212",
+        "Nathan Borges",
+        "121212"
+    ));
 }
 }

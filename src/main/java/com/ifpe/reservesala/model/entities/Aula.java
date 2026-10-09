@@ -25,6 +25,16 @@ public class Aula {
         
     }
     
+    public Aula(int id, LocalDate dataAula, int horaAula, int duracao, List<ItemEquipamento> itensApoio,Professor profResponsavel,Sala sala){
+        this.setId(id);
+        this.setDataAula(dataAula);
+        this.setHoraAula(horaAula);
+        this.setDuracao(duracao);
+        this.setItensApoio(itensApoio);
+        this.setProfResponsavel(profResponsavel);
+        this.setSala(sala);
+    }
+    
     public int getId() {
         return id;
     }
