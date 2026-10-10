@@ -44,8 +44,16 @@ public class ProfessorRepository {
         }
     }
     
-    public static void delete (Professor prof){
-        professores.remove(prof);
+    public static void delete(Professor prof) {
+        if (prof != null && prof.getSiape() != null) {
+            professores.removeIf(p -> prof.getSiape().equals(p.getSiape()));
+        }
+    }
+
+    public static void delete(String siape) {
+        if (siape != null) {
+            professores.removeIf(p -> siape.equals(p.getSiape()));
+        }
     }
     
     public static List<Professor> readAll(){

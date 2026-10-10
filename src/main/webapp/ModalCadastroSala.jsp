@@ -6,8 +6,8 @@
                 <h5 class="modal-title fw-bold"><i class="bi bi-pencil-square me-2"></i>Cadastrar Sala</h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
             </div>
-            <form action="CadastrarSala" method="post">
-                <input type="hidden" name="acao" value="cadastrarSala"/>
+            <form action="${pageContext.request.contextPath}/ProfessorIndexController" method="post">
+                <input type="hidden" name="operacao" value="cadastrarSala"/>
                 <input type="hidden" name="id" id="editSalaId"/>
 
                 <div class="modal-body p-4">

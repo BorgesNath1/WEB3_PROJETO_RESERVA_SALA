@@ -72,9 +72,23 @@ public class Sala {
         
         replica.setId(this.getId());
         replica.setNome(this.getNome());
+        replica.setLocalizacao(this.getLocalizacao());
         replica.setCapacidade(this.getCapacidade());
         replica.setTipo(this.getTipo());
         
         return replica;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Sala sala = (Sala) o;
+        return id == sala.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Integer.hashCode(id);
     }
 }

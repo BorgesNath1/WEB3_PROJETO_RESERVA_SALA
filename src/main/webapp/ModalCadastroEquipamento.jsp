@@ -1,13 +1,13 @@
 <!-- Modal Cadastrar Equipamento -->
 <div class="modal fade" id="modalCadastroEquipamento" tabindex="-1" aria-hidden="true">
-    <div class="modal-cadastro-header modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content border-0 shadow">
             <div class="modal-header bg-primary text-white py-3 px-4">
                 <h5 class="modal-title fw-bold"><i class="bi bi-pencil-square me-2"></i>Cadastrar Equipamento</h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
             </div>
-            <form action="CadastrarEquipamento" method="post">
-                <input type="hidden" name="acao" value="atualizarEquipamento"/>
+            <form action="${pageContext.request.contextPath}/ProfessorIndexController" method="post">
+                <input type="hidden" name="operacao" value="cadastrarEquipamento"/>
                 <input type="hidden" name="id" id="editEquipId"/>
 
                 <div class="modal-body p-4">

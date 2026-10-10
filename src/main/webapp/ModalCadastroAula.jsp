@@ -29,8 +29,8 @@
 
             <!-- Corpo com o Formulário -->
             <div class="modal-body p-4">
-                <form id="professorRegistroForm" class="needs-validation" novalidate method="post" action="CadastrarAulaServlet">
-                    <input type="hidden" name="operacao" value="cadastrar"/>
+                <form id="professorRegistroForm" class="needs-validation" novalidate method="post" action="${pageContext.request.contextPath}/ProfessorIndexController">
+                    <input type="hidden" name="operacao" value="cadastrarAula"/>    
 
                     <!-- Seção 1: Detalhes da Aula e Espaço -->
                     <h6 class="section-title-modal text-primary fw-bold mb-3 border-bottom pb-2">
@@ -69,7 +69,7 @@
                                 <i class="bi bi-clock text-primary me-1"></i> Hora de Início
                             </label>
                             <div class="input-group shadow-sm">
-                                <input type="number" class="form-control" id="horaAula" name="hora" min="6" max="23" placeholder="Ex: 8" required>
+                                <input type="number" class="form-control" id="horaAula" name="horaAula" min="6" max="23" placeholder="Ex: 8" required>
                                 <span class="input-group-text bg-light">:00</span>
                             </div>
                             <div class="invalid-feedback">Informe o horário.</div>

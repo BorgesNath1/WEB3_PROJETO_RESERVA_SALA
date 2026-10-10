@@ -39,8 +39,7 @@ Author     : Nathan
 
             <c:import url="header.jsp"></c:import>
             <c:import url="ModalCadastroAula.jsp"></c:import>
-            <c:import url="ModalCadastroEquipamento.jsp"></c:import>
-            <c:import url="ModalCadastroSala.jsp"></c:import>
+            
             <!-- ======================= MAIN ======================= -->
             <main class="container my-5 flex-grow-1">
                 

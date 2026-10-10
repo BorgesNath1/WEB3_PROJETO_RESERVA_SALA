@@ -12,6 +12,7 @@ import com.ifpe.reservesala.model.entities.Sala;
 import com.ifpe.reservesala.model.entities.TipoSala;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -56,8 +57,14 @@ public class AulaRepository {
         }
     }
     
-    public static void delete (Aula aula){
-        aulas.remove(aula);
+    public static void delete(Aula aula) {
+        if (aula != null) {
+            aulas.removeIf(a -> a.getId() == aula.getId());
+        }
+    }
+
+    public static void delete(int id) {
+        aulas.removeIf(a -> a.getId() == id);
     }
     
     public static List<Aula> readAll(){
@@ -74,6 +81,16 @@ public class AulaRepository {
             }
         }
         return temp;
+    }
+    
+    public static int getLastId(){
+        List<Integer> ids = new ArrayList<>();
+        
+        for(Aula a : aulas){
+            ids.add(a.getId());
+        }
+        Collections.sort(ids);
+        return ids.getLast()+1;
     }
     
     public static void seedAulas(List<Aula> aulas) {

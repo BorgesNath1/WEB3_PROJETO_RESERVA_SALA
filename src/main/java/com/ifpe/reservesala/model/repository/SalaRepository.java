@@ -7,6 +7,7 @@ package com.ifpe.reservesala.model.repository;
 import com.ifpe.reservesala.model.entities.Sala;
 import com.ifpe.reservesala.model.entities.TipoSala;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -46,13 +47,30 @@ public class SalaRepository {
         }
     }
     
-    public static void delete (Sala room){
-        salas.remove(room);
+    public static void delete(Sala room) {
+        if (room != null) {
+            salas.removeIf(s -> s.getId() == room.getId());
+        }
+    }
+
+    public static void delete(int id) {
+        salas.removeIf(s -> s.getId() == id);
     }
     
     public static List<Sala> readAll(){
         return salas;
     }
+    
+    public static int getLastId(){
+        List<Integer> ids = new ArrayList<>();
+        
+        for(Sala s : salas){
+            ids.add(s.getId());
+        }
+        Collections.sort(ids);
+        return ids.getLast()+1;
+    }
+
     
     
     private static void seedSalas(List<Sala> room) {

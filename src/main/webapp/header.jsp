@@ -13,6 +13,9 @@
             location.href="LoginProfessor.jsp";
         </script>
     </c:if>
+        
+        <c:import url="ModalCadastroEquipamento.jsp"></c:import>
+        <c:import url="ModalCadastroSala.jsp"></c:import>
     
         <header class="app-navbar text-white py-3 shadow-sm">
             <div class="container d-flex align-items-center justify-content-between">
@@ -53,8 +56,8 @@
                             <span>Equipamentos</span>
                         </button>
                         
-                        <!-- Botão + Equipamentos -->
-                        <a href="#"
+                        <!-- Botão Gerenciamento de Recursos -->
+                        <a href="${pageContext.request.contextPath}/ProfessorIndexController?operacao=managment"
                                 class="btn btn-sm btn-light bg-white bg-opacity-10 text-white border-0 shadow-none rounded-pill px-3 py-1.5 fw-medium d-flex align-items-center gap-1 hover-glass"
                                 >
                             <i class="bi bi-archive-fill text-white-50"></i>

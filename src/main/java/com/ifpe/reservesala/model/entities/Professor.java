@@ -56,5 +56,17 @@ public class Professor {
         
         return replica;
     }
-     
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Professor professor = (Professor) o;
+        return java.util.Objects.equals(siape, professor.siape);
+    }
+
+    @Override
+    public int hashCode() {
+        return java.util.Objects.hashCode(siape);
+    }
 }

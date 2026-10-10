@@ -6,6 +6,7 @@ package com.ifpe.reservesala.model.repository;
 
 import com.ifpe.reservesala.model.entities.Equipamento;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -45,14 +46,31 @@ public class EquipamentoRepository {
             }
         }
     }
-    
-    public static void delete (Equipamento equip){
-        equipamentos.remove(equip);
+       
+    public static void delete(Equipamento equip) {
+        if (equip != null) {
+            equipamentos.removeIf(e -> e.getId() == equip.getId());
+        }
+    }
+
+    public static void delete(int id) {
+        equipamentos.removeIf(e -> e.getId() == id);
     }
     
     public static List<Equipamento> readAll(){
         return equipamentos;
     }
+    
+    public static int getLastId(){
+        List<Integer> ids = new ArrayList<>();
+        
+        for(Equipamento a : equipamentos){
+            ids.add(a.getId());
+        }
+        Collections.sort(ids);
+        return ids.getLast()+1;
+    }
+
     
     
     private static void seedEquipamentos(List<Equipamento> equips) {
